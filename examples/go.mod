@@ -1,13 +1,13 @@
 module google.golang.org/grpc/examples
 
-go 1.22.0
+go 1.24.0
 
 require (
 	github.com/cncf/xds/go v0.0.0-20241223141626-cff3c89139a3
 	github.com/prometheus/client_golang v1.20.5
 	go.opentelemetry.io/otel/exporters/prometheus v0.56.0
 	go.opentelemetry.io/otel/sdk/metric v1.34.0
-	golang.org/x/oauth2 v0.25.0
+	golang.org/x/oauth2 v0.34.0
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250115164207-1a7da9e5054f
 	google.golang.org/grpc v1.70.0
 	google.golang.org/grpc/gcp/observability v1.0.1
