@@ -23,6 +23,8 @@ jobs:
         run: GRPC_EXPERIMENTAL_ENABLE_NEW_PICK_FIRST=true go test -coverprofile=coverage_new_pickfirst.out -coverpkg=./... ./...
 
       - name: Upload coverage to Datadog
+        continue-on-error: true
         env:
           DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}
-        run: npx --yes @datadog/datadog-ci coverage upload --service grpc-go coverage.out
+          DD_SERVICE: grpc-go
+        run: npx --yes @datadog/datadog-ci coverage upload coverage.out
